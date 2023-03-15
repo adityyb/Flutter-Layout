@@ -28,28 +28,28 @@ class DetailScreen extends StatelessWidget {
               ),
             ), //title container
             Container(
-              margin: const EdgeInsets.symmetric(vertical:16.0),
+              margin: EdgeInsets.symmetric(vertical:16.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   Column(
-                    children: const <Widget> [
+                    children: <Widget> [
                       Icon(Icons.calendar_today),
-                      Text('Open Everyday'),
+                      Text(place.day),
                     ],
                   ),
 
                   Column(
-                    children: const <Widget> [
+                    children: <Widget> [
                       Icon(Icons.access_time),
-                      Text('00.00 - 23.59'),
+                      Text(place.time),
                     ],
                   ),
 
                   Column(
-                    children: const <Widget> [
+                    children: <Widget> [
                       Icon(Icons.attach_money),
-                      Text('Rp.10.000'),
+                      Text(place.ticket),
                     ],
                   ),
                 ],
@@ -57,8 +57,8 @@ class DetailScreen extends StatelessWidget {
             ), //icon
             Container(
               padding: const EdgeInsets.all(16.0),
-              child: const Text(
-                'Museum inside a decommissioned Russian war submarinne with tours & an adjacent park with cafes. Clean and well mainntained. Car pakr cost 10k, entrance fee 15k/person. You can see KRI Pasopati there, it is a russian whiskey class. You can also watch the video about the Indonesian Navy at the buildinng beside the submarine.',
+              child: Text(
+                place.description,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 16.0,
@@ -75,8 +75,7 @@ class DetailScreen extends StatelessWidget {
                         padding: const EdgeInsets.all(8.0),
                         child:ClipRRect(
                           borderRadius: BorderRadius.circular(20),
-                          child: Image.network(
-                              'https://media-cdn.tripadvisor.com/media/photo-m/1280/16/a9/33/43/liburan-di-farmhouse.jpg'),
+                          child: Image.asset(place.img1),
                         )
                       ),
 
@@ -84,8 +83,7 @@ class DetailScreen extends StatelessWidget {
                           padding: const EdgeInsets.all(8.0),
                           child:ClipRRect(
                             borderRadius: BorderRadius.circular(20),
-                            child: Image.asset(
-                                'assets/images/monkasel_1.jpg'),
+                            child: Image.asset(place.img2),
                           )
                       ),
 
@@ -93,8 +91,7 @@ class DetailScreen extends StatelessWidget {
                           padding: const EdgeInsets.all(8.0),
                           child:ClipRRect(
                             borderRadius: BorderRadius.circular(20),
-                            child: Image.asset(
-                                'assets/images/monkasel_2.jpg'),
+                            child: Image.asset(place.img3),
                           )
                       ),
 
@@ -102,8 +99,7 @@ class DetailScreen extends StatelessWidget {
                           padding: const EdgeInsets.all(8.0),
                           child:ClipRRect(
                             borderRadius: BorderRadius.circular(20),
-                            child: Image.asset(
-                                'assets/images/monkasel_3.jpeg'),
+                            child: Image.asset(place.img4),
                           )
                       ),
 
