@@ -32,8 +32,18 @@ var tourismPlaceList = [
     imageAsset: 'assets/images/pahlawan.jpg',
   ),
   TourismPlace(
+    name: 'Kebun Teh Jamus',
+    location: 'Sine, Ngawi',
+    imageAsset: 'assets/images/jamus.jpg',
+  ),
+  TourismPlace(
     name: 'Patung Suro Boyo',
     location: 'Wonokromo',
     imageAsset: 'assets/images/sby.jpg',
+  ),
+  TourismPlace(
+    name: 'Benteng Van Den Bosch',
+    location: 'Ngawi',
+    imageAsset: 'assets/images/pendem.jpeg',
   ),
 ];
